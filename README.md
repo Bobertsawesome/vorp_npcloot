@@ -1,5 +1,5 @@
 # vorp_npcloot
-loot npcs  for weapons items money gold
+loot npcs 
 
 # instalation
 - do not rename the folder or it wont work
