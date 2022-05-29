@@ -25,7 +25,7 @@ RegisterServerEvent('vorp:npcloot:give_reward')
 AddEventHandler('vorp:npcloot:give_reward', function()
     local _source = source
     local chance = math.random(1, 100)
-    local Character = VORPcore.getUser(tonumber(_source)).getUsedCharacter
+    local Character = VORPcore.getUser(_source).getUsedCharacter
 
     if Config.canreceiveWeapons then
         if chance < Config.receiveWeapon then
@@ -60,7 +60,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
     if Config.canreceiveMoney then
         if chance < Config.receiveMoney then
             local item_type = math.random(1, #money)
-            Character.addCurrency(tonumber(_source), 0, money[item_type])
+            Character.addCurrency( 0, money[item_type])
             TriggerClientEvent("vorp:TipRight", _source, "you got " .. money[item_type] .. "$", 2000)
         end
     end
@@ -68,7 +68,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
     if Config.canreceiveGold then
         if chance < Config.receiveGold then
             local item_type = math.random(1, #gold)
-            Character.addCurrency(tonumber(_source), 1, gold[item_type])
+            Character.addCurrency( 1, gold[item_type])
             TriggerClientEvent("vorp:TipRight", _source, "you got " .. gold[item_type] .. " nugget.", 2000)
         end
     end
