@@ -15,7 +15,7 @@ Config.items = {
 
 
 ------------------------ MONEY -----------------------------------
-Config.canreceiveMoney = false
+Config.canreceiveMoney = true
 Config.receiveMoney = 50 -- percentage out of 100
 
 Config.money = {
@@ -35,7 +35,7 @@ Config.gold = {
 }
 
 ----------------------- WEAPONS --------------------------------------
-Config.canreceiveWeapons = true
+Config.canreceiveWeapons = false
 Config.receiveWeapon = 10 -- percentage out of 100
 Config.weapons = {
     [1] = { name = "WEAPON_REVOLVER_CATTLEMAN", label = "Revolver cattleman" }, --you get a random weapon from the list

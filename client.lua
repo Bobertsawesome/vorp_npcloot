@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
             for i = 0, size - 1 do
                 local eventAtIndex = GetEventAtIndex(0, i)
                 if eventAtIndex == 1376140891 then
-                    local view   = exports["vorp_npcloot"]:DataViewNativeGetEventData2(0, i, 3)
+                    local view   = exports["NPCloot"]:DataViewNativeGetEventData2(0, i, 3)
                     local entity = view["2"]
                     if not Citizen.InvokeNative(0x964000D355219FC0, entity) then
                         local eventDataSize = 3
