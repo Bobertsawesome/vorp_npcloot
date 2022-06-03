@@ -43,7 +43,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
                 if canCarry then
 
                     Inventory.createWeapon(_source, reward1[chance1].name, ammo, components)
-                    TriggerClientEvent("vorp:TipRight", _source, "You got " .. reward1[chance1].label, 3000)
+                    TriggerClientEvent("vorp:TipRight", _source, "You found " .. reward1[chance1].label, 3000)
                 else
                     TriggerClientEvent("vorp:TipRight", _source, "You can't carry any more WEAPONS", 3000)
                 end
@@ -61,7 +61,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
         if chance < Config.receiveMoney then
             local item_type = math.random(1, #money)
             Character.addCurrency( 0, money[item_type])
-            TriggerClientEvent("vorp:TipRight", _source, "you got " .. money[item_type] .. "$", 2000)
+            TriggerClientEvent("vorp:TipRight", _source, "You found " .. money[item_type] .. "$", 2000)
         end
     end
 
@@ -69,7 +69,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
         if chance < Config.receiveGold then
             local item_type = math.random(1, #gold)
             Character.addCurrency( 1, gold[item_type])
-            TriggerClientEvent("vorp:TipRight", _source, "you got " .. gold[item_type] .. " nugget.", 2000)
+            TriggerClientEvent("vorp:TipRight", _source, "You found " .. gold[item_type] .. " nugget.", 2000)
         end
     end
 
@@ -88,7 +88,7 @@ AddEventHandler('vorp:npcloot:give_reward', function()
                 TriggerEvent("vorpCore:canCarryItem", tonumber(_source), reward[chance2].name, count, function(canCarry2)
                     if canCarry and canCarry2 then
                         Inventory.addItem(_source, reward[chance2].name, count)
-                        TriggerClientEvent("vorp:TipRight", _source, "You got " .. reward[chance2].label, 3000)
+                        TriggerClientEvent("vorp:TipRight", _source, "You found " .. reward[chance2].label, 3000)
                     else
                         TriggerClientEvent("vorp:TipRight", _source, "You can't carry any more " .. reward[chance2].label, 3000)
                     end
