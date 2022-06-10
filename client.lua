@@ -19,7 +19,11 @@ Citizen.CreateThread(function()
                             if PlayerPedId() == eventDataStruct:GetInt32(0) then
                                 local type = GetPedType(entity)
                                 if type == 4 then
-                                    TriggerServerEvent("vorp:npcloot:give_reward")
+                                       if Citizen.InvokeNative(0x8DE41E9902E85756, entity) then
+
+                                        TriggerServerEvent("vorp:npcloot:give_reward")
+
+                                    end
                                 end
                             end
                         end
