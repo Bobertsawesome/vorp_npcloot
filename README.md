@@ -1,3 +1,7 @@
+# Edits made to original repository for Underworld Redemption
+All credit goes to the orginal creators
+
+
 # vorp_npcloot
 loot npcs 
 
